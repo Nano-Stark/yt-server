@@ -36,7 +36,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/videos", videoRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/test", (req, res) => {
-  res.status(200).end("This is a testing route");
+  res.status(200).send("This is a testing route");
 });
 
 app.use((err, req, res, next) => {
