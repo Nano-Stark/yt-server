@@ -11,7 +11,7 @@ import cors from "cors";
 const app = express();
 dotenv.config();
 
-console.log("Something is wrong", status, message);
+console.log("Something is wrong");
 
 const connectDB = () => {
   mongoose
