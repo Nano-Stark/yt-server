@@ -18,6 +18,7 @@ const connectDB = () => {
       console.log("Conect to DB");
     })
     .catch((err) => {
+      console.log("Error connecting to database Stark", err);
       throw err;
     });
 };
