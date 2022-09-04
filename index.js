@@ -11,6 +11,8 @@ import cors from "cors";
 const app = express();
 dotenv.config();
 
+console.log("Something is wrong", status, message);
+
 const connectDB = () => {
   mongoose
     .connect(process.env.MONGO)
