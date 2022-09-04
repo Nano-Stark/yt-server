@@ -18,7 +18,6 @@ const connectDB = () => {
       console.log("Conect to DB");
     })
     .catch((err) => {
-      console.log("Error connecting to database Stark", err);
       throw err;
     });
 };
@@ -38,6 +37,7 @@ app.use("/api/comments", commentRoutes);
 app.use((err, req, res, next) => {
   const status = err.status || 500;
   const message = err.message || "Something went wrong";
+  console.log("Something is wrong", status, message);
   return res.status(status).json({
     success: false,
     status,
